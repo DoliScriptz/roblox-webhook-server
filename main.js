@@ -48,7 +48,16 @@ ${joinScript}
     const response = await fetch(webhookUrl, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    });
+        'Content-Type': 'application/json' 
+          console.log("Webhook sent:", data);
+    res.status(200).send('Webhook sent');
+  } catch (error) {
+    console.error("Error sending webhook:", error);
+    res.status(500).send('Error sending webhook');
+  }
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(Server is running on port ${PORT});
+});
