@@ -1,0 +1,12 @@
+{
+"name": "roblox-webhook-server",
+"version": "1.0.0",
+"main": "main.js",
+"scripts": {
+"start": "node main.js"
+},
+"dependencies": {
+"express": "^4.17.1",
+"node-fetch": "^2.6.1"
+}
+}
